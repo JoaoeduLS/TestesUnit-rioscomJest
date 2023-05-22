@@ -67,6 +67,8 @@ describe("testando a calculadora0", () => {
 
 ## Teste Assíncrono no Jest
 
+#### teste para banco de dados
+
 <p>Criar uma pasta db, e dentro dela criar um arquivo db.json,
 inserir as seguintes informações:</p>
 
@@ -84,3 +86,15 @@ inserir as seguintes informações:</p>
   ]
 }
 ```
+
+<p>depois instale:</p>
+
+    npm install json-server
+
+<p>Abrir o arquivo existente package.json e incluir essa linha no script</p>
+
+    "backend": "json-server --watch db/db.json"
+
+<p>Depois use o comando:</p>
+
+    npm run backend

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "backend": "json-server --watch db/db.json"
   },
   "author": "",
   "license": "ISC",
@@ -14,4 +15,5 @@
   "dependencies": {
     "json-server": "^0.17.3"
   }
+  
 }
