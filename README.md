@@ -64,3 +64,23 @@ describe("testando a calculadora0", () => {
   });
 });
 ```
+
+## Teste Assíncrono no Jest
+
+<p>Criar uma pasta db, e dentro dela criar um arquivo db.json,
+inserir as seguintes informações:</p>
+
+```json
+{
+  "alunos": [
+    {
+      "id": 1,
+      "nome": "Maria"
+    },
+    {
+      "id": 2,
+      "nome": "Ana"
+    }
+  ]
+}
+```
