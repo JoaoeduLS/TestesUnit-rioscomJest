@@ -16,7 +16,7 @@
 
 <p>Sempre que voce for testa va ao package.json e mude para esse scripts test:</p>
 
-```
+```js
 "scripts": {
     "test": "jest"
   },
@@ -24,7 +24,7 @@
 
 #### Codigo do para fazer o test funcionar :
 
-```
+```js
 function somar(a, b) {
   return a + b;
 }
@@ -46,7 +46,7 @@ function subtrair(a, b) {
 exports.subtrair = subtrair;
 ```
 
-```
+```js
 const calculadora = require("./calculadora");
 
 describe("testando a calculadora0", () => {
@@ -98,3 +98,24 @@ inserir as seguintes informações:</p>
 <p>Depois use o comando:</p>
 
     npm run backend
+
+#### para realiza o test de chamada
+
+<p>instala o:</p>
+
+    npm install --save-dev jest
+
+<p>Criar um arquivo asyncawaiit.test.js e inserir:</p>
+
+```js
+describe("Testando uma requisição", () => {
+  test("requisição com sucesso", async () => {
+    const response = await fetch("http://localhost:3000/alunos/2");
+    const aluno = await response.json();
+    console.log("O aluno é: ", aluno.nome);
+    expect(aluno.nome).toEqual("Ana");
+  });
+});
+```
+
+<p>lembre de usa o npm t para testa</p>

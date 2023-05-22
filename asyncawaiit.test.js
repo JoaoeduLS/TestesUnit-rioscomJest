@@ -3,6 +3,6 @@ describe("Testando uma requisição", () => {
     const response = await fetch("http://localhost:3000/alunos/2");
     const aluno = await response.json();
     console.log("O aluno é: ", aluno.nome);
-    expect(aluno.nome).toEqual("Ana");
+    expect(aluno.nome).toEqual("Ana"); ///pesquisa o teste por nome no npm t aqui com nome diferente
   });
 });
