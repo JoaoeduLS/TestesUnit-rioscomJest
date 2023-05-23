@@ -119,3 +119,35 @@ describe("Testando uma requisição", () => {
 ```
 
 <p>lembre de usa o npm t para testa</p>
+
+### Isolando uma função a testar
+
+<p>Criar um arquivo soma.js e inserir:</p>
+
+```js
+function soma(a, b) {
+  return a + b;
+}
+module.exports = soma;
+```
+
+<p>Criar um arquivo media.js e inserir:</p>
+
+```js
+const soma = require("./soma");
+function media(a, b) {
+  s = soma(a, b);
+  m = s / 2;
+  return m;
+}
+exports.media = media;
+```
+
+<p>Criar um arquivo media.test.js e inserir:</p>
+
+```js
+const calculo = require("./media");
+test("Testando a media aritmética", () => {
+  expect(calculo.media(7, 4)).toBe(5.5);
+});
+```
